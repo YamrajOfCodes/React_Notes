@@ -1,0 +1,24 @@
+                                    //reconciliation
+The algorithm React uses to diff one tree with another to determine which parts need to be changed.
+konala update karne aahe konala nahi..
+
+Reconciliation is the algorithm behind what is popularly understood as the "virtual DOM." ( yalach behind the scene virtual dom mhntat)
+A high-level description goes something like this: when you render a React application, a tree of nodes that describes the app is generated and saved in memory.
+This tree is then flushed to the rendering environment(object tre)
+
+                              // Fiber
+
+React Fiber is an ongoing reimplementation of React's core algorithm.
+
+
+                             //Reconciliation versus rendering
+The DOM is just one of the rendering environments React can render to, the other major targets being native iOS and Android views via React Native. (This is why "virtual DOM" is a bit of a misnomer.)
+
+The reason it can support so many targets is because React is designed so that reconciliation and rendering are separate phases. The reconciler does the work of computing which parts of a tree have changed; the renderer then uses that information to actually update the rendered app.
+
+This separation means that React DOM and React Native can use their own renderers while sharing the same reconciler, provided by React core.
+
+Fiber reimplements the reconciler
+
+
+       // Je React.createRoot je methd  aste react app madhe te virtual dom create karte 
